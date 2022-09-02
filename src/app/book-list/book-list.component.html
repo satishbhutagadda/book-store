@@ -1,0 +1,14 @@
+<section class="book-list">
+    <mat-card class="book-card" *ngFor="let book of books;">
+        <mat-card-title-group>
+          <mat-card-title>{{book.title}}</mat-card-title>
+          <mat-card-subtitle>{{book.publishDate | date}}</mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content>
+            {{book.description}}
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-button type="button" color="primary" (click)="findAuthors(book.id)">Check Authors</button>
+        </mat-card-actions>
+    </mat-card>
+</section>
